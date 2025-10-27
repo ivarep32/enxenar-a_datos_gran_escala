@@ -20,9 +20,9 @@ Clave foránea: id_medico -> Médico(id_medico)
 Clave foránea: id_medicamento -> Medicamento(id_medicamento)
 
 
-Hospital(id_hospital, nome, enderezo)
+(In progress) Hospital(id_hospital, nome, enderezo)
 
-Area(id_hospital, nome_area)
+(In progress) Area(id_hospital, nome_area)
 Clave foránea: id_hospital -> Hospital(id_hospital)
 
 TraballaEn(id_medico, id_hospital, nome_area)
@@ -38,6 +38,7 @@ Clave foránea: id_hospital, nome_area -> Area(id_hospital, nome_area)
 Ingreso(id_cita, fecha_alta)
 
 InformesCita(id_informe, id_cita)
+
 
 
 
