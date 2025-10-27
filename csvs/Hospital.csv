@@ -1,0 +1,220 @@
+﻿id_hospital;nombre;pais;localidad;codigo_postal;calle;numero;latitud;longitud;tipo
+1;Centro Médico El Robledal;España;Murcia;30110;Avenida Maestra Soledad Gallego;42;38.0186139;-1.136792;Privado
+2;Centro Médico San Miguel;España;Vega de Pas;39685;CA-263;6;43.1558354;-3.7834411;Privado
+3;Hospital San Fernando;España;Villanueva de la Serena;6700;Calle San Benito;1;38.9738365;-5.8011603;Público
+4;Sanatorio La Esperanza;España;Villagarcía de Arosa;36600;Travesía da Xalda;3;42.6139846;-8.7735197;Público
+5;Centro Médico Santa Clara;España;Monreal del Campo;44300;Calle Mayor;70;40.7868614;-1.3546476;Privado
+6;Clínica San Fernando;España;Lleida;25006;Avinguda de Balmes;13;41.6176887;0.6197591;Público
+7;Sanatorio San Vicente;España;Chañe;40216;Plaza Mayor;7;41.3379745;-4.4291596;Público
+8;Centro Médico Santa Clara;España;Santa Cruz de Tenerife;38003;Calle Imeldo Serís;25;28.4658765;-16.2499474;Público
+9;Centro Médico Vistalegre;España;Solares;39710;Avenida Calvo Sotelo;13;43.3859696;-3.7330489;Privado
+10;Clínica Nuestra Señora del Carmen;España;Selva;7313;Ma-2130;4;39.7507233;2.9024261;Público
+11;Clínica San Miguel;España;Km;50750;AP-2;48;41.526161;-0.3967808;Público
+12;Hospital Universitario Taylor Swift;España;Selva;7313;Carrer dels Angels;11;39.7540893;2.9008524;Público
+13;Clínica Las Violetas;España;Villanueva de la Condesa;47608;Calle la Iglesia;2;42.1486334;-5.0944626;Público
+14;Hospital Universitario San Fernando;España;Urrez;9199;Calle la Bolera;64;42.2701278;-3.402007;Público
+15;Centro Médico La Esperanza;España;La Gineta;2110;Calle Camino Real;71;39.1137413;-1.9966713;Privado
+16;Hospital El Mirador;España;Girona;17005;Carrer Barcelona;483;41.9500938;2.8064932;Privado
+17;Hospital Universitario Santa Clara;España;Catral;3158;Avda. de la Purísima;65;38.1654972;-0.8032623;Público
+18;Centro Médico Castelao;España;Catral;3158;Calle San Pascual Bailón;2;38.1583762;-0.7982551;Público
+19;Hospital Universitario Castelao;España;Santa Cruz;15179;Rúa Concepción Arenal;51;43.3486903;-8.3463299;Privado
+20;Clínica San Pedro;España;San Pablo de los Montes;45120;Calle Toledo;21;39.5391662;-4.3300606;Público
+21;Clínica San Andrés;España;Mollina;29532;Calle Carreteros;67;37.1288131;-4.6585416;Público
+22;Hospital San Lorenzo;España;Mungia;48100;Lauaxeta Olerkari Kalea;4;43.356083;-2.8487787;Privado
+23;Centro Médico La Esperanza;España;Mendavia;31587;Calle Augusto Echeverría;28;42.4436111;-2.1994444;Público
+24;Clínica San Martín;España;Luna;50610;Plaza España;7;42.1668184;-0.9320238;Privado
+25;Hospital El Pinar;España;O Cumial;32915;Cumial;2;42.289586;-7.8397897;Público
+26;Hospital Santa Clara;España;Salamanca;37001;Plaza del Poeta Iglesias;10;40.9641364;-5.6638296;Privado
+27;Hospital Rosalía de Castro;España;Torremocha del Campo;19268;Nacional II;117;40.9728546;-2.6168408;Privado
+28;Centro Médico Rosalía de Castro;España;Cabezón de Pisuerga;47260;Calle Bastas;22;41.7329496;-4.6441728;Privado
+29;Centro Médico San Fernando;España;Moià;8180;C-59;1;41.808913;2.0983357;Privado
+30;Sanatorio Nuestra Señora del Carmen;España;Selorio;33316;Terienzu;15;43.5168074;-5.3673819;Privado
+31;Clínica La Paloma;España;Gorliz;48630;Iturgitxi Kalea;4;43.4076114;-2.9443762;Público
+32;Centro Médico Taylor Swift;España;Puerto de la Cruz;38400;Carretera General Puerto Cruz - Arenas;51;28.4078297;-16.5492554;Público
+33;Hospital Universitario Monte del Sol;España;Chiva;46370;Cuñat y Cortes;3;39.4714202;-0.7163485;Público
+34;Centro Médico San Miguel;España;Ayamonte;21400;Plaza Industrial Sepes;100;37.2310466;-7.3961393;Privado
+35;Clínica Virgen del Rocío;España;Bergara;20570;San Pedro Kalea;4;43.1166104;-2.4130151;Privado
+36;Centro Médico San José;España;Murcia;30890;Calle Mably;2;37.5615768;-1.8091169;Público
+37;Hospital Monteverde;España;Tronchón;44141;Calle Crucera;1;40.6215458;-0.3986313;Privado
+38;Centro Médico Monte del Sol;España;Cazalla de la Sierra;41370;CL NUESTRA SEÑORA DEL CARMEN;4;37.9358303;-5.7596972;Privado
+39;Sanatorio Virgen del Rocío;España;Santa Comba;15860;Santa Comba;61;43.0297815;-8.7982503;Privado
+40;Hospital Universitario San Andrés;España;Coto-Ríos;23478;Calle Aguacebas;22;38.0477075;-2.8486582;Privado
+41;Hospital Maluma;España;Arboleas;4660;AL-8107;24;37.352301;-2.084413;Público
+42;Centro Médico Vistalegre;España;Corvera;30153;Carretera Fuente Álamo;3;37.832756;-1.1538753;Privado
+43;Sanatorio El Mirador;España;Montealegre del Castillo;2650;Calle del Capataz Santiago Gómez Nogurón;19;38.785756;-1.3304346;Público
+44;Sanatorio Virgen del Rocío;España;Pals;17256;Avinguda dels Arenals de Mar;36;41.9953373;3.1974347;Privado
+45;Clínica La Rosaleda;España;Teguedite;38589;Calle los Gavilanes;8;28.17147;-16.4968499;Privado
+46;Hospital Universitario San Rafael;España;Puerto Lumbreras;30890;Calle los Limoneros;43;37.5666047;-1.7967279;Privado
+47;Hospital Buenavista;España;Bédar;4288;Calle Llanos;30;37.1923155;-1.9802958;Privado
+48;Hospital Los Almendros;España;Real Sitio de San Ildefonso;40100;Calle Infantes;3;40.9013589;-4.0076991;Público
+49;Hospital Universitario Las Violetas;España;Cáceres;10003;Calle Orellana;1;39.4735927;-6.3713366;Público
+50;Hospital Universitario El Pinar;España;Caño;33557;Lugar Cañu;3;43.330869;-5.1364692;Público
+51;Centro Médico San Andrés;España;Menorca;7701;Carrer de Dalt Vilanova;1;39.8915544;4.259214;Privado
+52;Hospital Universitario San Juan;España;A Coruña;15004;Rúa Picavia;2;43.3651857;-8.4055485;Público
+53;Hospital La Paloma;España;Tobera;9211;Calle de Burgos;23;42.7500316;-3.3051781;Privado
+54;Hospital Universitario Monteverde;España;Lominchar;45212;Calle Palomeque;10;40.0899236;-3.9669235;Público
+55;Hospital Santa Lucía;España;Guillena;41210;Calle Príncipe de Asturias;3;37.5388449;-6.0532851;Privado
+56;Hospital Los Almendros;España;Villaviciosa;33300;Calle Cervantes;1;43.4818752;-5.433153;Público
+57;Centro Médico San Lorenzo;España;Luciana;13108;Calle Piedrabuena;2;38.9842015;-4.2915524;Privado
+58;Clínica San Lorenzo;España;Chiva;46370;Calle Urrea;50;39.4571495;-0.73188;Privado
+59;Sanatorio Los Almendros;España;Alcaudete;23660;Calle Alcalde Fernando Tejero;11;37.5876514;-4.082737;Público
+60;Sanatorio La Rosaleda;España;Utiel;46300;Calle Antonio Maura;5;39.5666714;-1.2073825;Público
+61;Hospital Universitario Monte del Sol;España;Vega de Pas;39685;Plaza Doctor Madrazo;15;43.1583383;-3.7820152;Público
+62;Hospital Universitario Monte Alegre;España;Ávila;5001;Calle Marqués de Canales y Chozas;2;40.6580009;-4.7014493;Privado
+63;Hospital Universitario Santa María;España;Reus;43201;Carrer de Vallroquetes;7;41.1560537;1.1099607;Público
+64;Hospital Universitario El Pinar;España;Uleila del Campo;4279;Avenida de Jaun Carlos I;5;37.1833;-2.20621;Privado
+65;Hospital Virgen del Rocío;España;Cee;15138;Aldea Bermún;35;42.9948348;-9.1907504;Privado
+66;Hospital Universitario El Valle;España;San Román;15318;Calle San Román Orto;23;43.2802131;-8.2758206;Privado
+67;Sanatorio Santa Clara;España;Riaño;24900;Calle Resejo;10;42.9764633;-5.0038132;Público
+68;Hospital Universitario El Mirador;España;Las Poyatas;38820;Calle el Cabo;2;28.148477;-17.199338;Público
+69;Sanatorio Santa Lucía;España;Sarriguren;31621;Calle Bardenas Reales;76;42.8084564;-1.5899238;Público
+70;Sanatorio San Miguel;España;Cangas del Narcea;33800;Calle Alcalde Díaz Penedela;4;43.178094;-6.5505436;Privado
+71;Hospital Universitario Monte del Sol;España;Vielha;25530;Avenguda deth Pas d'Arró;29;42.699364;0.8019311;Privado
+72;Centro Médico El Mirador;España;Sant Sadurní d'Anoia;8770;Carrer de Tarragona;25;41.4266264;1.7826258;Privado
+73;Clínica Buenavista;España;Trujillo;10200;Calle de la Victoria;8;39.460317;-5.8838999;Privado
+74;Clínica El Pinar;España;Villaquilambre;24195;Lugar Villaobispo;732;42.6040694;-5.5317945;Público
+75;Hospital San Fernando;España;A Coruña;15007;Ronda de Outeiro;135;43.354972;-8.411871;Privado
+76;Hospital Universitario Nuestra Señora del Carmen;España;Hortigüela;9640;Calle Espolon;22-24;42.068652;-3.4252106;Privado
+77;Hospital Universitario Monteverde;España;Vega de Pas;39685;Avenida José Manuel Abascal;2;43.1580231;-3.7835438;Público
+78;Hospital Universitario San Vicente;España;Roquetas de Mar;4740;Calle Chillida;1;36.818959;-2.5978576;Público
+79;Hospital Universitario Virgen del Rocío;España;Xaló;3727;Avinguda Rei Juan Carlos I;51;38.7435174;-0.016745;Público
+80;Clínica La Rosaleda;España;El Paso;38750;Carretera General Tajuya;2;28.6337055;-17.8898694;Privado
+81;Hospital Universitario El Valle;España;Candeleda;5480;Calle Camino del Lomo;225;40.1151673;-5.2591751;Público
+82;Hospital Universitario San Fernando;España;Cheste;46380;Avenida Castilla;21;39.4921074;-0.6838931;Público
+83;Hospital La Candelaria;España;Ronda;29400;Calle Nueva;4;36.7415034;-5.1659301;Privado
+84;Centro Médico El Mirador;España;Mocejón;45270;Calle Ramón y Cajal;25;39.9386672;-3.9173011;Privado
+85;Sanatorio San José;España;Madrid;28023;Calle Baja de la Iglesia;3;40.4585237;-3.7828747;Privado
+86;Clínica Santa Teresa;España;Salou;43840;Carrer del Vendrell;1;41.0671058;1.1507092;Público
+87;Hospital Universitario San Andrés;España;Boiro;15930;Rúa Principal;130;42.6458311;-8.8900275;Público
+88;Clínica Las Violetas;España;Foia d'Elx;3294;Avinguda Sant Antoni de Padua;23;38.213057;-0.6836257;Público
+89;Centro Médico Los Pinos;España;Almería;4007;Calle Joaquín Vázquez;2;36.829589;-2.4553569;Público
+90;Centro Médico San Miguel;España;Taboada;27550;Avenida de Lugo;58;42.7175132;-7.76331;Privado
+91;Sanatorio El Pinar;España;Vélez-Rubio;4820;Avenida de Andalucia;87;37.6481399;-2.0774395;Público
+92;Centro Médico El Robledal;España;Valdelateja;9145;Calle Maestro Santidrian;15;42.774866;-3.7673369;Privado
+93;Clínica Santa María;España;Badajoz;6004;Av de Fernando Maestre Calzadilla;1;38.8728436;-6.9726772;Privado
+94;Centro Médico Taibo;España;Alcalá de Henares;28806;Calle de Fausto Elhuyar;3;40.481821;-3.394529;Público
+95;Clínica Vistalegre;España;El Cuervo;41749;Avenida Jerez;42;36.852508;-6.0411907;Público
+96;Clínica Santa Teresa;España;La Laguna;38297;TF-235;131;28.4901313;-16.3665752;Privado
+97;Centro Médico Santa Teresa;España;A Coruña;15008;Estrada Baños de Arteixo;43;43.3454114;-8.4292933;Privado
+98;Hospital San Lorenzo;España;Cardeña;14445;Plaza de la Independencia Local;7-2;38.2707418;-4.3236022;Público
+99;Clínica Las Violetas;España;Santa Olalla;45530;Autovía del Suroeste;85;40.0222434;-4.4877901;Privado
+100;Centro Médico Santa Teresa;España;Cáceres;10001;Calle Gómez Becerra;2;39.4698755;-6.3792663;Privado
+101;Hospital Universitario El Mirador;España;La Seu d'Urgell;25700;Carrer de Sant Domènec;6;42.358655;1.4619617;Privado
+102;Sanatorio Las Violetas;España;Costa Adeje;38660;Calle Lisboa;2;28.087693;-16.728154;Privado
+103;Hospital Universitario San Fernando;España;Ronda;29400;Calle Nueva;4;36.7415034;-5.1659301;Público
+104;Centro Médico Nuestra Señora del Carmen;España;Ocaña;45300;Calle Mariana Pineda;13;39.9563763;-3.4965948;Público
+105;Sanatorio Santa María;España;Avilés;33402;Calle San Francisco;4;43.555245;-5.9227782;Público
+106;Centro Médico San Martín;España;Valladolid;47001;Calle de Pedro Niño;1;41.6514186;-4.7313942;Público
+107;Hospital San Lorenzo;España;Rute;14960;Calle Alfonso de Castro;28;37.3255539;-4.3694062;Público
+108;Clínica San Vicente;España;Ampuero;39849;La Bien Aparecida;11;43.3264644;-3.4531231;Privado
+109;Clínica Santa Lucía;España;Sigüeiro;15888;Rúa Xuncal;4;42.968772;-8.44223;Público
+110;Hospital Universitario Rosalía de Castro;España;Algodonales;11680;Avenida de Andalucia;174;36.8832175;-5.3942691;Público
+111;Hospital San Pedro;España;Quintes;33314;Calle Cimadevilla;2;43.5317322;-5.5431351;Público
+112;Hospital Universitario La Rosaleda;España;Terrassa;8227;Urbanitzacio Can Salas;9;41.591985;2.0431725;Privado
+113;Hospital Castelao;España;Madrid;28004;Calle del Pez;36;40.4242754;-3.7065235;Privado
+114;Clínica San Martín;España;Alcalá de Henares;28801;Calle San Felipe Neri;3;40.4812276;-3.3689333;Público
+115;Hospital Universitario Monte del Sol;España;Moià;8180;Carrer de les Joies;4;41.8121687;2.0980266;Público
+116;Sanatorio Castelao;España;Villaseca de Laciana;24140;Travesía de Babia;32;42.9428698;-6.2472399;Privado
+117;Clínica San Andrés;España;Carranque;45216;Avenida de la Industria;3;40.1808334;-3.8876347;Público
+118;Hospital Taylor Swift;España;Navarrés;46823;Calle Carretera;0;39.0766284;-0.7046492;Público
+119;Hospital Santa Teresa;España;Ourense;32005;Rúa dos Fornos;11;42.3372291;-7.8627643;Privado
+120;Hospital Universitario La Paloma;España;Cangas de Onís;33556;AS-114;34;43.3375355;-5.0062467;Privado
+121;Hospital Universitario Rosalía de Castro;España;Alcoi;3802;Carrer els Alçamora;44;38.6975152;-0.4804722;Público
+122;Centro Médico San Fernando;España;A Coruña;15001;Praza de España;16;43.3728413;-8.3971863;Público
+123;Hospital San Miguel;España;Daimiel;13250;Paseo del Carmen;1;39.0721219;-3.6077429;Público
+124;Sanatorio San Rafael;España;Cee;15138;Aldea Bermún;35;42.9948348;-9.1907504;Privado
+125;Hospital San Fernando;España;San Martín de Valdeiglesias;28680;Carretera de Toledo;7;40.3591686;-4.4065436;Privado
+126;Hospital Universitario San Juan;España;Almoradí;3160;Calle Mayor;11;38.1085679;-0.7928026;Público
+127;Centro Médico Los Pinos;España;A Insua;27793;Estrada xeral San Miguel;4;43.5441262;-7.1935129;Privado
+128;Clínica San Pedro;España;Madrid;28023;Calle de Rafael Botí;4;40.4632204;-3.8032207;Público
+129;Centro Médico Nuestra Señora del Carmen;España;Puigpunyent;7194;Carrer de Ciutat;6;39.6218963;2.5277045;Público
+130;Hospital Universitario Los Pinos;España;Córdoba;14003;Calle Romero;1;37.87972;-4.78131;Público
+131;Hospital Universitario Monteverde;España;Gijón;33394;Camin de la Pasadiella;85;43.5134865;-5.5988385;Público
+132;Centro Médico San Fernando;España;Mutilva Baja;31192;Plaza Castillo de Irulegui Enparantza;9;42.7923429;-1.6149388;Privado
+133;Sanatorio Los Pinos;España;Lugo;27003;Rúa Monte Faro;19;43.0229566;-7.5637917;Privado
+134;Clínica San Andrés;España;La Palma del Condado;21700;Calle las Cañadas;27;37.3848155;-6.5453397;Privado
+135;Centro Médico Santa Clara;España;Soutelo;36750;Rua Soutelo;32;41.956619;-8.781807;Privado
+136;Centro Médico La Candelaria;España;Albiztur;20495;Erdigunea Gunea;22;43.1297955;-2.1371081;Privado
+137;Hospital San Lorenzo;España;Castadón;32710;OU-536;123;42.3453503;-7.8137063;Privado
+138;Sanatorio Monte Alegre;España;Tavèrnoles;8519;Carrer Montseny;15;41.9539022;2.3267989;Privado
+139;Sanatorio Vistalegre;España;Logrosán;10120;Carretera Guadalupe;3;39.3334904;-5.4799596;Público
+140;Centro Médico Santa Clara;España;Calaf;8280;Avinguda de la Carretera d'Igualada;1;41.7287353;1.5134425;Público
+141;Hospital Universitario La Candelaria;España;Alcaudete;23660;Calle Juan de Alcaudete;37;37.588933;-4.078001;Privado
+142;Centro Médico Monte Alegre;España;La Puebla de Alfindén;50171;Calle Fernando Moliné;13;41.6310341;-0.7514236;Privado
+143;Centro Médico Los Pinos;España;Badolatosa;41570;Calle Sevilla;19;37.3066719;-4.6706209;Privado
+144;Clínica Los Pinos;España;Km;50750;AP-2;48;41.526161;-0.3967808;Privado
+145;Centro Médico San Miguel;España;Onzonilla;24231;Carretera Zamora;6;42.5286598;-5.5837148;Privado
+146;Hospital Universitario Los Pinos;España;Hondón de las Nieves;3688;Plaza de la Villa;22;38.3084584;-0.8531983;Privado
+147;Hospital Santa Lucía;España;Langreo;33930;Calle Cutu La Piedra;3;43.3175348;-5.6932635;Privado
+148;Clínica San Rafael;España;Salou;43840;Carrer del Vendrell;1;41.0671058;1.1507092;Público
+149;Sanatorio San Juan;España;L'Estartit;17258;Carrer de les Illes;33;42.0553209;3.203642;Privado
+150;Sanatorio San Rafael;España;Caldes de Malavella;17455;Carrer de Sant Esteve;7;41.837129;2.8083505;Privado
+151;Clínica Santa Lucía;España;Santa Comba;15840;Rúa Lugo;18;43.03226;-8.8116299;Público
+152;Hospital Santa Clara;España;Toledo;45007;Calle Industrial Hernisa I;16;39.869856;-3.954647;Privado
+153;Sanatorio San José;España;Lo Jurado;30154;Av. de España;101;37.804822;-1.130999;Privado
+154;Clínica Castelao;España;Soria;42003;Calle Cortes de Soria;1;41.7632092;-2.4685905;Privado
+155;Hospital Nuestra Señora del Carmen;España;Bergara;20570;Ibargarai Hiribidea;44;43.1153287;-2.4163843;Privado
+156;Sanatorio San Vicente;España;Guillena;41210;Calle Príncipe de Asturias;3;37.5388449;-6.0532851;Privado
+157;Centro Médico Los Almendros;España;Quero;45790;Plaza de la Villa;4;39.5096839;-3.2469498;Público
+158;Centro Médico San Rafael;España;Palenzuela;34257;Calle Ramirez y Pastor;21;42.0948829;-4.1277536;Privado
+159;Hospital El Robledal;España;Roquetas de Mar;4740;Calle Chillida;1;36.818959;-2.5978576;Privado
+160;Sanatorio San José;España;Caravaca de la Cruz;30400;Avenida Carretera de Granada;11;38.1038444;-1.8652278;Privado
+161;Hospital Universitario La Rosaleda;España;Gorliz;48630;Iturgitxi Kalea;4;43.4076114;-2.9443762;Privado
+162;Hospital Universitario Monteverde;España;Luciana;13108;Calle Piedrabuena;2;38.9842015;-4.2915524;Público
+163;Hospital Universitario Monte Alegre;España;Alcúdia;7400;Carrer de Sant Vicenç;14;39.8527664;3.1223267;Público
+164;Clínica El Robledal;España;Menorca;7701;Carrer de Dalt Vilanova;1;39.8915544;4.259214;Público
+165;Hospital Universitario Monte Alegre;España;Madrid;28050;Ronda de la Comunicación;5;40.5178019;-3.6669933;Privado
+166;Hospital Universitario San Juan;España;Camprodon;17867;Carrer València;63;42.31364;2.36788;Privado
+167;Sanatorio San Rafael;España;Baides;19295;Calle Estación;17;41.00482;-2.78539;Privado
+168;Hospital Universitario Santa Clara;España;Villarmayor;37130;Calle calzada;9;41.0142206;-5.976175;Público
+169;Hospital Santa María;España;Jauja;14911;Calle Iglesia;24;37.3030123;-4.6564586;Privado
+170;Hospital Universitario San Martín;España;Valdelateja;9145;Calle Maestro Santidrian;15;42.774866;-3.7673369;Público
+171;Centro Médico San Andrés;España;Canedo;24546;Calle Iglesia;5;42.6451645;-6.705092;Privado
+172;Sanatorio Monte Alegre;España;Cangas del Narcea;33800;Calle Uría;29;43.177118;-6.549352;Privado
+173;Hospital San Miguel;España;Pamplona;31621;Calle La Valeta;12;42.8146283;-1.6075853;Público
+174;Centro Médico El Robledal;España;Prádanos de Ojeda;34486;Calle Solana;22;42.6809117;-4.3455387;Privado
+175;Centro Médico Vistalegre;España;Pontido;15181;Cabana -Anceis;5;43.2808061;-8.3607298;Privado
+176;Sanatorio Los Almendros;España;Sant Cugat del Vallès;8174;Carretera de Rubí;6;41.4785937;2.0684012;Público
+177;Centro Médico San Pedro;España;Motilla del Palancar;16200;Plaza de España;4;39.5609023;-1.9102578;Privado
+178;Sanatorio San Martín;España;Motilla del Palancar;16200;Carretera Valencia;79;39.5600703;-1.9052528;Público
+179;Sanatorio San Fernando;España;Segovia;40001;Calle de la Herrería;11;40.950083;-4.122491;Público
+180;Hospital La Esperanza;España;Salceda de Caselas;36470;Praza do Concello;6;42.1021138;-8.5583456;Privado
+181;Sanatorio San Vicente;España;Los Canarios;38740;Carretera General;98;28.49432;-17.84535;Privado
+182;Hospital Universitario Vistalegre;España;Zamora;49016;Avenida de Portugal;28;41.5049191;-5.7400189;Privado
+183;Centro Médico Santa Lucía;España;Villanueva de la Serena;6700;Calle del Romero;7;38.9675712;-5.7898704;Privado
+184;Clínica La Rosaleda;España;Aldea del Cano;10163;CC-71;605;39.2902467;-6.3286424;Privado
+185;Clínica Monteverde;España;León;24192;Carretera Vilecha-Tr;21;42.5805336;-5.5728037;Privado
+186;Centro Médico Monte Alegre;España;Alcaudete;23660;Carretera de la Fuensanta;38;37.5891037;-4.0764503;Público
+187;Hospital San Juan;España;Briviesca;9240;Calle San Martín;3;42.5511429;-3.3242132;Público
+188;Hospital El Pinar;España;Sotopalacios;9140;Carretera Santander;8;42.4332657;-3.681746;Público
+189;Sanatorio Santa Clara;España;Mungia;48100;Usandizaga Eresgille Kalea;13;43.3552225;-2.8501903;Público
+190;Sanatorio Castelao;España;Alcañices;49500;Calle San Francisco;29;41.6997394;-6.3458715;Público
+191;Centro Médico Monte Alegre;España;L'Escala;17130;Carrer Punxa;2;42.1086845;3.1679366;Privado
+192;Hospital Universitario San José;España;Escalada;9145;N-623;60;42.8022244;-3.7689875;Privado
+193;Hospital San José;España;Villaseca de Laciana;24140;Travesia Laciana;13;42.9439008;-6.2532478;Privado
+194;Hospital San Juan;España;Villaviciosa;33315;Calle La Atalaya;9;43.5415206;-5.4007336;Privado
+195;Clínica San José;España;Santa María de la Alameda;28296;estación;10;40.5675699;-4.2683856;Privado
+196;Centro Médico Las Violetas;España;Puente Genil;14500;Calle Montalbán;19;37.3994789;-4.7643766;Privado
+197;Hospital San José;España;Dosbarrios;45311;Autovía del Sur;69;39.8902587;-3.4732856;Público
+198;Clínica Virgen del Rocío;España;A Valenza;32002;Avenida de Celanova;57;42.319423;-7.8813493;Privado
+199;Sanatorio San Lorenzo;España;Logroño;26006;Calle Piquete;8;42.4574235;-2.4365213;Privado
+200;Hospital San Lorenzo;España;Sariñena;22200;Avenida de Fraga;6;41.7926369;-0.1562206;Público
+201;Centro Médico San Fernando;España;Baamonde;27371;Calle del Museo;29;43.1753044;-7.7603722;Público
+202;Hospital San Lorenzo;España;Colmenar del Arroyo;28213;Plaza de España;3;40.4185317;-4.1983881;Privado
+203;Hospital Buenavista;España;Salomó;43885;Carrer Nou;12;41.2302622;1.3748993;Público
+204;Centro Médico San Pedro;España;Madrid;28014;Calle de San Blas;4;40.4106783;-3.6947231;Privado
+205;Sanatorio Santa Teresa;España;La Seu d'Urgell;25700;Carrer de Sant Domènec;6;42.358655;1.4619617;Público
+206;Centro Médico San Lorenzo;España;Villaviciosa;33300;Calle Cervantes;1;43.4818752;-5.433153;Privado
+207;Sanatorio La Rosaleda;España;Madrid;28012;Calle de Botoneras;6;40.4149117;-3.7068219;Privado
+208;Sanatorio Rosalía de Castro;España;Mendiondo;48610;Mendiondo Auzoa;4;43.3679868;-2.9427673;Privado
+209;Clínica El Mirador;España;Hellín;2400;Calle Hilario López Millán;10;38.5088624;-1.6957998;Privado
+210;Hospital Universitario Rosalía de Castro;España;Boiro;15930;Rúa Principal;130;42.6458311;-8.8900275;Privado
+211;Sanatorio Nuestra Señora del Carmen;España;Fuensaldaña;47194;Travesía Motilla;2;41.7059402;-4.7649302;Privado
+212;Clínica Santa Clara;España;Foia d'Elx;3294;Avinguda Sant Antoni de Padua;23;38.213057;-0.6836257;Público
+213;Centro Médico San Martín;España;A Coruña;15001;Praza de España;16;43.3728413;-8.3971863;Privado
+214;Sanatorio El Robledal;España;Valdepeñas;13300;Calle Capitán Fillol;3;38.7617617;-3.387915;Privado
+215;Hospital El Valle;España;Inca;7300;Avinguda Jaume I;143;39.7166334;2.9160946;Privado
+216;Hospital Universitario Los Pinos;España;Villaviciosa;33300;Calle Manuel Álvarez Miranda;13;43.4817014;-5.4314675;Público
+217;Sanatorio El Valle;España;Sabadell;8202;Carrer Mare de Déu de les Neus;6;41.5505361;2.1077053;Público
+218;Hospital Universitario Monte Alegre;España;Saelices de la Sal;19443;Carretera Cifuentes;64;40.906099;-2.3242465;Público
+219;Sanatorio Virgen del Rocío;España;Betanzos;15300;Travesía Progreso;9;43.2798064;-8.2095954;Público
