@@ -1,13 +1,6 @@
 ﻿# enxenar-a_datos_gran_escala
 TO DO:
 
-Paciente(id_paciente)
-Clave foránea: id_paciente -> Persoa(id_persoa)
-
-Médico(id_médico, id_xefe)
-Clave foránea: id_médico -> Persoa(id_persoa)
-Clave foránea: id_xefe -> Médico(id_medico)
-
 Informe(id_paciente, id_informe, feito_por, fecha, categoría, texto)
 Clave foránea: id_paciente -> Paciente(id_paciente)
 Clave foránea: feito_por-> Médico(id_medico)
@@ -19,11 +12,6 @@ Clave foránea: id_paciente -> Paciente(id_paciente)
 Clave foránea: id_medico -> Médico(id_medico)
 Clave foránea: id_medicamento -> Medicamento(id_medicamento)
 
-
-(In progress) Hospital(id_hospital, nome, enderezo)
-
-(In progress) Area(id_hospital, nome_area)
-Clave foránea: id_hospital -> Hospital(id_hospital)
 
 TraballaEn(id_medico, id_hospital, nome_area)
 Clave foránea: id_medico -> Médico(id_medico)

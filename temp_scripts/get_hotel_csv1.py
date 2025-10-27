@@ -1,7 +1,8 @@
 import pandas as pd
 import glob
 import random
-from faker import Faker
+from faker import Faker # Esto agora nn o utilizamos, pero sirve para sacar cidades, nomes, e cousas aleatorias
+# da lingua q lle especifiques
 
 fake = Faker('es_ES')  # Español
 
