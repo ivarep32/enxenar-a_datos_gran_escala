@@ -1,0 +1,7 @@
+Paciente de 63 años, diagnosticada de diabetes, hipertensión e hipercolesterolemia, con antecedentes de infarto de miocardio, que toma 9 medicamentos. Acude a la farmacia comunitaria (FC) para retirar el tratamiento prescrito desde el Servicio de Urgencias para tratar una conjuntivitis.
+
+Desde el servicio de dispensación se detecta un Problema Relacionado con el Medicamento (PRM) de un potencial error en la prescripción, que podría tener asociado un Resultado Negativo a la medicación (RNM) al prescribirse gotas óticas para uso oftálmico, comprometiendo la seguridad de la paciente.
+
+Se deriva al Servicio de Urgencias para modificación del tratamiento por considerarse un potencial riesgo, siguiendo indicaciones de Ficha Técnica. En el Servicio de Urgencias se rechaza la intervención propuesta y se remite de nuevo a la paciente a FC a retirar el fármaco. La paciente decide esperar dos días a una cita médica presencial con su Médico de Atención Primaria (MAP). La propuesta realizada desde la FC fue aceptada por el MAP.
+
+Se realiza seguimiento del caso, que permite constatar la resolución del problema de salud, así como los PRM y RNM detectados, logrando una mejora en la salud del paciente y garantizando así un uso racional, seguro y eficaz del medicamento.

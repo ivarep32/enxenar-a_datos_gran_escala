@@ -1,0 +1,13 @@
+Paciente: Mujer, 25 años
+
+Diagnóstico final: cardiomiopatía periparto
+
+Síntomas: Fatiga • ortopnea • edema pulmonar • taquicardia
+
+Medicación: —
+
+Procedimiento clínico: —
+
+Describimos el caso de una mujer de 25 años con un curso grave de PPCM con fracción de eyección del ventrículo izquierdo de 25-30 %, complicado por arritmia ventricular y tiroiditis posparto. Como no se identificaron factores de riesgo tradicionales de PPCM, la paciente fue derivada para pruebas genéticas. La secuenciación de nueva generación reveló una nueva mutación de truncamiento del gen de la titina NM_001267550: p.Leu23499fs/c.70497_40498insT en la proband, así como en su madre.
+
+En la paciente se observó una recuperación muy tardía >12 meses después del parto, que precisó tratamiento médico a largo plazo con bromocriptina.

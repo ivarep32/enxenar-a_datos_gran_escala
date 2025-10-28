@@ -1,0 +1,13 @@
+Paciente: Hombre, 63 años
+
+Diagnóstico final: Edema pulmonar cardiovenoso hipertensivo
+
+Síntomas: falta de aire
+
+Medicación: —
+
+Procedimiento clínico: —
+
+Especialidad: Medicina general e interna
+
+Un hombre hispano de 63 años con antecedentes de hipertensión, enfermedad de las arterias coronarias, insuficiencia cardiaca con una fracción de eyección reducida del 35 %, enfermedad renal crónica (ERC) y diabetes mellitus, se presentó como una emergencia con disnea aguda y grave. El paciente fue tratado inicialmente con 100 % de oxígeno suplementario y nitroglicerina intravenosa (IV) en dosis altas (30 mcg/min), que se ajustó cada 3 minutos, aumentando en 15 mcg/min hasta que se alcanzó una dosis de 120 mcg/min. Después de 18 minutos de terapia agresiva, la condición del paciente mejoró y ya no necesitaba ventilación mecánica.

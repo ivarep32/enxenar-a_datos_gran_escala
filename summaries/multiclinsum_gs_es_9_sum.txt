@@ -1,0 +1,5 @@
+Paciente de 38 años, diagnosticado de asma y ansiedad que utilizaba 2 medicamentos (salbutamol 100 mcg inhalador (2 pulv. cada 6 horas) y diazepam 5 mg (0-0-1)), acude a la Farmacia Comunitaria (FC) para retirar un tratamiento prescrito por el Médico de Atención Primaria (MAP) tras diagnóstico de un cuadro ansioso-depresivo.
+
+Desde el Servicio de Dispensación (SD) se detectó un Problema Relacionado con el Medicamento (PRM) de un potencial error en la prescripción, que podría tener asociado un Resultado Negativo asociado a la Medicación (RNM) ante uso concomitante de desvenlafaxina y mirtazapina, así como un PRM de Problema de Salud (PS) insuficientemente tratado ante una propuesta de suspensión de uso de diazepam, que podría derivar en un RNM de Necesidad de Tratamiento ante el riesgo de empeoramiento de episodios de ansiedad.
+
+Desde la FC, se elaboró un informe de derivación con recomendaciones que fueron aceptadas por el MAP. Se llevó a cabo un seguimiento del caso que permitió realizar un mejor control de los PS presentados por el paciente, así como la resolución de los PRM y RNM detectados, garantizando así un uso racional, seguro y eficaz del medicamento.

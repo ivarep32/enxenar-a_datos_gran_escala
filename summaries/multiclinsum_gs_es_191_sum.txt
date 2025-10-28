@@ -1,0 +1,16 @@
+Paciente: Mujer, 36 años
+
+Diagnóstico final: Shock cardiogénico • miocarditis
+
+Síntomas: Fiebre
+
+Medicación: —
+
+Procedimiento clínico: soporte circulatorio mecánico
+
+Especialidad: Cirugía
+
+
+Informe del caso:
+
+Reportamos el caso de una mujer de 36 años que desarrolló fiebre y shock cardiogénico 3 días después de una picadura de abeja. La angiografía cardíaca mostró arterias coronarias permeables y una función ventricular izquierda gravemente comprometida. Su hemodinámica permaneció inestable bajo una dosis alta de agentes inotrópicos y apoyo con un balón intraaórtico. El paro cardíaco intrahospitalario ocurrió 4 horas después del ingreso y recibió reanimación cardiopulmonar extracorpórea. Su oxigenación de membrana extracorpórea venosa periférica (VA ECMO) se cambió a dispositivos de asistencia ventricular bilateral (VAD) debido a una insuficiencia cardíaca derecha progresiva. El resultado de la biopsia endomiocárdica fue compatible con el cuadro de miocarditis por hipersensibilidad. Su corazón entró en paro persistente bajo apoyo circulatorio mecánico. Se sometió a un trasplante de corazón el día 49 del ingreso y permaneció clínicamente estable 6 meses después del alta.
