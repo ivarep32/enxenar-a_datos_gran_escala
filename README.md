@@ -1,7 +1,7 @@
 ﻿# enxenar-a_datos_gran_escala
 TO DO:
 
-Informe(id_paciente, id_informe, feito_por, fecha, categoría, texto)
+Informe(id_paciente, id_informe, feito_por, fecha, categoría, texto) - empiezo 
 Clave foránea: id_paciente -> Paciente(id_paciente)
 Clave foránea: feito_por-> Médico(id_medico)
 
@@ -26,6 +26,7 @@ Clave foránea: id_hospital, nome_area -> Area(id_hospital, nome_area)
 Ingreso(id_cita, fecha_alta)
 
 InformesCita(id_informe, id_cita)
+
 
 
 
