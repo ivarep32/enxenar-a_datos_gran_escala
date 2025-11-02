@@ -1,12 +1,6 @@
 ﻿# enxenar-a_datos_gran_escala
 TO DO:
-EMPIEZO CON RECETA
-
-Receita(id_paciente, id_medico, id_medicamento, fecha, razon)
-Clave foránea: id_paciente -> Paciente(id_paciente)
-Clave foránea: id_medico -> Médico(id_medico)
-Clave foránea: id_medicamento -> Medicamento(id_medicamento)
-
+EMPIEZO CON TRABALLA
 
 TraballaEn(id_medico, id_hospital, nome_area)
 Clave foránea: id_medico -> Médico(id_medico)
@@ -21,6 +15,7 @@ Clave foránea: id_hospital, nome_area -> Area(id_hospital, nome_area)
 Ingreso(id_cita, fecha_alta)
 
 InformesCita(id_informe, id_cita)
+
 
 
 
