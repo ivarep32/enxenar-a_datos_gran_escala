@@ -1,3 +1,15 @@
+"""
+NON SE USA XA
+
+NON UTILIZAR
+
+NON :D
+
+DON'T DO IT
+
+USA informes_cita.py
+"""
+
 import pandas as pd
 import numpy as np
 import random
@@ -60,3 +72,15 @@ df_citas.to_csv("../csvs/Cita.csv", index=False, sep=";", encoding="utf-8-sig")
 
 print(f"✅ Successfully generated {len(df_citas)} citas.")
 print(df_citas.head())
+
+"""
+NON SE USA XA
+
+NON UTILIZAR
+
+NON :D
+
+DON'T DO IT
+
+USA informes_cita.py
+"""

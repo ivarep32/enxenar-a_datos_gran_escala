@@ -32,7 +32,7 @@ if len(summary_texts) == 0:
     raise ValueError("No usable (non-empty) text files found in 'summaries'.")
 
 # === Parameters ===
-mean_informes_per_medico = 40
+mean_informes_per_medico = 50
 std_dev_informes = 10
 categorias = [
     "Radiología", "Consulta General", "Cardiología", "Urgencias",
@@ -58,13 +58,14 @@ patient_informes_used = {pid: 0 for pid in patient_ids}
 summary_index = 0  # to rotate through summaries
 
 for _, medico in df_medicos.iterrows():
-    n_informes = int(max(5, np.random.normal(mean_informes_per_medico, std_dev_informes)))
+    n_informes = int(max(0, np.random.normal(mean_informes_per_medico, std_dev_informes)))
     medico_id = medico["id_medico"]
 
     for _ in range(n_informes):
         available_patients = [pid for pid, used in patient_informes_used.items()
                               if used < patient_informes[patient_ids.index(pid)]]
         if not available_patients:
+            print("No more available patients")
             break
 
         pid = random.choice(available_patients)
@@ -77,7 +78,7 @@ for _, medico in df_medicos.iterrows():
         informes_data.append({
             "id_paciente": pid,
             "id_informe": id_counter,
-            "feito_por": medico_id,
+            "id_medico": medico_id,
             "fecha": random_date_within_years(),
             "categoría": random.choice(categorias),
             "texto": texto
@@ -91,4 +92,5 @@ df_informes.to_csv(output_path, index=False, sep=";", encoding="utf-8-sig")
 
 print(f"✅ Generated {len(df_informes)} informes.")
 print(f"📁 Saved to: {output_path}")
+print("Number of rows:", len(df_informes))
 print(df_informes.head(10))
