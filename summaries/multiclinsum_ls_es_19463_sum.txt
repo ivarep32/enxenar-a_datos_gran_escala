@@ -1,0 +1,1 @@
+Presentamos un caso de diagnóstico electrocardiográfico de IAM en un paciente con marcapasos. El Electrocardiograma (ECG) fue falso negativo al usar los criterios originales de Sgarbossa, mientras que fue positivo verdadero según el MSC con una proporción de - 0.20.

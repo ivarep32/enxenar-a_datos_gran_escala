@@ -1,0 +1,1 @@
+Aquí, reportamos una variante GRIA2 de novo (NM_001083619.3: c.2308G>A, p.Ala770Thr) en un paciente con regresión de comportamiento obvia y síntomas psiquiátricos. Codifica GluA2, que es la subunidad crucial del receptor AMPA, y se predice que la variación sin sentido dará como resultado la inestabilidad de la estructura de la proteína.

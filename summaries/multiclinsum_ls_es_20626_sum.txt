@@ -1,0 +1,1 @@
+Aquí informamos el caso de un paciente inmunosuprimido infectado con una variante B.1.1.7, que recibió una combinación de anticuerpos monoclonales y, posteriormente, seleccionó las mutaciones K417N, E484K y Q493R en la proteína Spike de SARS-CoV-2.

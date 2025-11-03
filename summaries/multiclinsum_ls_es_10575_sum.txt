@@ -1,0 +1,1 @@
+En este informe de caso, observamos un episodio de extrasístoles ventriculares sin cambios hemodinámicos, durante el cual el dispositivo de sincronización no funcionó correctamente, y los impulsos no se suministraron en el período refractario absoluto, sino en el relativo.
