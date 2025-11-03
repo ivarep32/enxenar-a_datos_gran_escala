@@ -64,88 +64,89 @@ InformesCita(id_informe, id_cita)
 */
 
 
-CREATE TYPE hotel.estado_reserva_enum AS ENUM ('Check-Out', 'Canceled', 'Upcoming', 'No-Show');
-CREATE TYPE hotel.vistas_enum AS ENUM ('No views', 'Partial views', 'Full views');
+--CREATE TYPE hotel.estado_reserva_enum AS ENUM ('Check-Out', 'Canceled', 'Upcoming', 'No-Show');
+--CREATE TYPE hotel.vistas_enum AS ENUM ('No views', 'Partial views', 'Full views');
 
--- Tabla Hotel
-CREATE TABLE hotel.hotel (
-    id_hotel VARCHAR(9) PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    rua VARCHAR(100) NOT NULL,
-    portal INT NOT NULL,
-    cod_postal VARCHAR(12) NOT NULL,
-    localidade VARCHAR(100) NOT NULL,
-    pais VARCHAR(50) NOT NULL
+-- Tabla Hospital
+CREATE TABLE hospital.persona (
+    id_persona VARCHAR(9) PRIMARY KEY, --no es mejor poner int?
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    genero VARCHAR(10) NOT NULL,
+    fecha_nacimiento DATE NOT NULL,
+    pais VARCHAR(50) NOT NULL,
+    localidad VARCHAR (50) NOT NULL,
+    codigo_postal VARCHAR(12) NOT NULL, -- no es mejor int?
+    calle VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    numero_telefono VARCHAR(20) NOT NULL
 );
 
--- Tabla Traballador
-CREATE TABLE hotel.traballador (
-    id_traballador VARCHAR(9) PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
-    apelidos VARCHAR(100),
-    posto VARCHAR(50) NOT NULL
+-- Tabla Paciente
+CREATE TABLE hospital.paciente (
+    id_paciente VARCHAR(9) PRIMARY KEY,
+    grupo_sanguineo VARCHAR(5) NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES hospital.persona(id_persona)
 );
 
--- Tabla Contrata
-CREATE TABLE hotel.contrata (
-    id_contrato SERIAL PRIMARY KEY,
-    id_traballador VARCHAR(9),
-    id_hotel VARCHAR(9),
-    data_comezo DATE NOT NULL,
-    duracion INT NOT NULL,
-    salario DECIMAL(10, 2) CHECK (salario > 0),
-    FOREIGN KEY (id_hotel) REFERENCES hotel.hotel,
-    FOREIGN KEY (id_traballador) REFERENCES hotel.traballador
+-- Tabla Medico
+CREATE TABLE hospital.medico (
+    id_medico VARCHAR (9) PRIMARY KEY,
+    id_jefe VARCHAR(9),
+    FOREIGN KEY (id_medico) REFERENCES hospital.persona(id_persona),
+    FOREIGN KEY (id_jefe) REFERENCES hospital.medico(id_medico)
 );
 
--- Tabla Servizo
-CREATE TABLE hotel.servizo (
-    id_hotel VARCHAR(9),
-    nome VARCHAR(50),
-    precio DECIMAL(10, 2) NOT NULL,
-    descricion VARCHAR(200) DEFAULT '',
-    PRIMARY KEY (id_hotel, nome),
-    FOREIGN KEY (id_hotel) REFERENCES hotel.hotel
+-- Tabla Informe
+CREATE TABLE hospital.informe (
+    id_paciente VARCHAR (9) PRIMARY KEY,
+    id_informe VARCHAR(9) PRIMARY KEY,
+    hecho_por VARCHAR(9) NOT NULL,
+    fecha DATE NOT NULL,
+    categoria VARCHAR(20) NOT NULL ,
+    texto TEXT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
+    FOREIGN KEY (hecho_por) REFERENCES hospital.medico(id_medico)
+
 );
 
--- Tabla Cliente
-CREATE TABLE hotel.cliente (
-    id_cliente VARCHAR(9) PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
-    apelidos VARCHAR(100) NOT NULL,
-    rua VARCHAR(100),
-    portal INT,
-    localidade VARCHAR(100),
-    provincia VARCHAR(100),
-    rexion VARCHAR(100),
-	cod_postal VARCHAR(12),
-    pais VARCHAR(100)
+-- Tabla Hospital
+CREATE TABLE hospital.hospital (
+    id_hospital VARCHAR(9) PRIMARY KEY ,
+    nombre VARCHAR(50) NOT NULL,
+    pais VARCHAR(20) NOT NULL,
+    localidad VARCHAR(50) NOT NULL,
+    codigo_postal VARCHAR(20) NOT NULL,
+    calle VARCHAR(50) NOT NULL,
+    numero VARCHAR(9) NOT NULL,
+    latitud DECIMAL(10, 8) NOT NULL,
+    longitud DECIMAL(11, 8) NOT NULL,
+    tipo VARCHAR(10) NOT NULL
 );
 
--- Tabla Reserva
-CREATE TABLE hotel.reserva (
-    id INT PRIMARY KEY,
-    id_cliente VARCHAR(9) NOT NULL,
-    id_hotel VARCHAR(9) NOT NULL,
-    data_reserva DATE NOT NULL,
-    data_chegada DATE NOT NULL,
-    duracion INT NOT NULL CHECK (duracion > 0),
-    n_adultos INT NOT NULL CHECK (n_adultos > 0),
-    n_nenos INT NOT NULL CHECK (n_nenos >= 0),
-    precio DECIMAL(10, 2) CHECK (precio >= 0),
-    estado hotel.estado_reserva_enum DEFAULT 'Upcoming',
-    FOREIGN KEY (id_hotel) REFERENCES hotel.hotel,
-    FOREIGN KEY (id_cliente) REFERENCES hotel.cliente
+-- Tabla Area
+CREATE TABLE hospital.area (
+    id_hospital VARCHAR(9) PRIMARY KEY ,
+    nombre_area VARCHAR(20) PRIMARY KEY ,
+    FOREIGN KEY (id_hospital) REFERENCES hospital.hospital
 );
 
--- Tabla Servizos_Reserva
-CREATE TABLE hotel.servizos_reserva (
-    id INT,
-    id_hotel VARCHAR(9),
-    nome VARCHAR(50),
-    PRIMARY KEY (id, id_hotel, nome),
-    FOREIGN KEY (id) REFERENCES hotel.reserva,
-    FOREIGN KEY (id_hotel, nome) REFERENCES hotel.servizo
+-- Tabla Cita
+CREATE TABLE hospital.cita (
+    id_paciente VARCHAR(9) PRIMARY KEY ,
+    id_cita VARCHAR(9) PRIMARY KEY ,
+    id_medico VARCHAR(9) NOT NULL,
+    id_hospital VARCHAR(9) NOT NULL,
+    nombre_area VARCHAR(20) NOT NULL,
+    fecha DATE NOT NULL,
+    hora_comienzo TIME NOT NULL,
+    hora_fin TIME NOT NULL,
+    razon VARCHAR(50) NOT NULL,
+    presencial VARCHAR(1) NOT NULL DEFAULT 'T',
+    FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico,
+    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area,
+    CHECK (presencial IN ('T','F'))
 );
 
 -- Tabla Lugar
