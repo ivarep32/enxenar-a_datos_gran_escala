@@ -2,7 +2,7 @@ import pandas as pd
 import random
 
 # Number of medications to generate
-num_meds =1000
+#num_meds =1000
 
 # Example medication names and active substances
 # (These are realistic but simplified)
@@ -40,7 +40,7 @@ medication_names = [
 ]
 
 # If we need more than available, we sample with replacement
-meds_sample = random.choices(medication_names, k=num_meds)
+meds_sample = random.choices(medication_names, k=len(medication_names))
 
 # Build dataframe
 data = []
