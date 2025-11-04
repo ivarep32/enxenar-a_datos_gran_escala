@@ -19,51 +19,6 @@ DROP TABLE IF EXISTS hospital.receta CASCADE;
 DROP TABLE IF EXISTS hospital.trabaja_en CASCADE;
 DROP TABLE IF EXISTS hospital.informe_cita CASCADE;
 
-/*
-Persoa(id_persoa, nome, apelidos, sexo, birthdate, enderezo, telefono)
-
-Paciente(id_paciente, grupo_sanguineo)
-Clave foránea: id_paciente -> Persoa(id_persoa)
-
-Médico(id_médico, id_xefe)
-Clave foránea: id_médico -> Persoa(id_persoa)
-Clave foránea: id_xefe -> Médico(id_medico)
-
-Informe(id_paciente, id_informe, feito_por, fecha, categoría, texto)
-Clave foránea: id_paciente -> Paciente(id_paciente)
-Clave foránea: feito_por-> Médico(id_medico)
-
-Medicamento(id_medicamento, nome, principio_activo)
-
-Receita(id_paciente, id_medico, id_medicamento, fecha, razon)
-Clave foránea: id_paciente -> Paciente(id_paciente)
-Clave foránea: id_medico -> Médico(id_medico)
-Clave foránea: id_medicamento -> Medicamento(id_medicamento)
-
-
-Hospital(id_hospital, nombre, pais, localidad, codigo_postal, calle, numero, latitud, longitud, tipo)
-
-
-
-Area(id_hospital, nome_area)
-Clave foránea: id_hospital -> Hospital(id_hospital)
-
-TraballaEn(id_medico, id_hospital, nome_area)
-Clave foránea: id_medico -> Médico(id_medico)
-Clave foránea: id_hospital, nome_area -> Area(id_hospital, nome_area)
-
-Cita(id_paciente, id_cita, id_medico, id_hopsital, nome_area, fecha, hora_comezo, hora_finalización, razon, presencial)
-Clave foránea: id_paciente -> Paciente(id_paciente)
-Clave foránea: id_medico -> Médico(id_medico)
-Clave foránea: id_hospital, nome_area -> Area(id_hospital, nome_area)
-
-
-Ingreso(id_cita, fecha_alta)
-
-InformesCita(id_informe, id_cita)
-*/
-
-
 --CREATE TYPE hotel.estado_reserva_enum AS ENUM ('Check-Out', 'Canceled', 'Upcoming', 'No-Show');
 --CREATE TYPE hotel.vistas_enum AS ENUM ('No views', 'Partial views', 'Full views');
 
@@ -76,7 +31,7 @@ CREATE TABLE hospital.persona (
     fecha_nacimiento DATE,
     pais VARCHAR(50),
     localidad VARCHAR (50),
-    codigo_postal VARCHAR(20), -- no es mejor int? noup, hai letras nalgúns países :/
+    codigo_postal VARCHAR(20),
     calle VARCHAR(100),
     numero VARCHAR(20),
     numero_telefono VARCHAR(20)
@@ -120,7 +75,7 @@ CREATE TABLE hospital.hospital (
     numero VARCHAR(15),
     latitud DECIMAL(10, 8),
     longitud DECIMAL(11, 8),
-    tipo VARCHAR(10) -- Esto q era? Se é estilo centro de saúde/hospital, entón mellor facer un enum
+    tipo VARCHAR(10)
 );
 
 -- Tabla Area
@@ -146,109 +101,50 @@ CREATE TABLE hospital.cita (
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
     FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
 );
+-- Tabla Ingreso
+CREATE TABLE hospital.ingreso (
+    id_cita VARCHAR(9) PRIMARY KEY,
+    fecha_alta DATE NOT NULL,
+    FOREIGN KEY (id_cita) REFERENCES hospital.cita
 
-
-
-
--- Tabla Lugar
-CREATE TABLE hotel.lugar (
-    id_hotel VARCHAR(9),
-    piso INT,
-    nome VARCHAR(50),
-    anotacions VARCHAR(500) DEFAULT '',
-    PRIMARY KEY (id_hotel, piso, nome),
-    FOREIGN KEY (id_hotel) REFERENCES hotel.hotel
 );
 
--- Tabla Tipo_Habitación
-CREATE TABLE hotel.tipo_habitacion (
-    id SERIAL PRIMARY KEY,
-    numero_camas DECIMAL(3, 1) NOT NULL,
-    descricion VARCHAR(200),
-    baño BOOLEAN,
-    balcon BOOLEAN,
-    cociña BOOLEAN,
-    vistas hotel.vistas_enum,
-    cortina_blackout BOOLEAN
+-- Tabla Medicamento
+CREATE TABLE hospital.medicamento (
+    id_medicamento VARCHAR(9) PRIMARY KEY ,
+    nombre VARCHAR(20) NOT NULL,
+    principio_activo VARCHAR(20) NOT NULL
 );
 
--- Tabla Habitación
-CREATE TABLE hotel.habitacion (
-    id_hotel VARCHAR(9),
-    piso INT,
-    nome VARCHAR(50),
-    tipo_habitacion INT,
-    PRIMARY KEY (id_hotel, piso, nome),
-    FOREIGN KEY (id_hotel, piso, nome) REFERENCES hotel.lugar,
-    FOREIGN KEY (tipo_habitacion) REFERENCES hotel.tipo_habitacion(id)
+-- Tabla Receta
+CREATE TABLE hospital.receta (
+    id_paciente VARCHAR(9) PRIMARY KEY ,
+    id_medico VARCHAR(9) PRIMARY KEY,
+    id_medicamento VARCHAR(9) PRIMARY KEY,
+    fecha DATE NOT NULL,
+    razon TEXT NOT NULL,
+    FOREIGN KEY (id_paciente) REFERENCES hospital.paciente(id_paciente),
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
+    FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento)
+
 );
 
--- Tabla Habitacións_Reserva
-CREATE TABLE hotel.habitacions_reserva (
-    id INT,
-    id_hotel VARCHAR(9),
-    piso INT,
-    nome VARCHAR(50),
-    PRIMARY KEY (id, id_hotel, piso, nome),
-    FOREIGN KEY (id) REFERENCES hotel.reserva,
-    FOREIGN KEY (id_hotel, piso, nome) REFERENCES hotel.habitacion
+-- Tabla Trabaja_En
+CREATE TABLE hospital.trabajaEn (
+    id_medico VARCHAR(9) NOT NULL,
+    id_hospital VARCHAR(9) NOT NULL,
+    nombre_area VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico,
+    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
 );
 
--- Tabla Contacto
-CREATE TABLE hotel.contacto (
-	id INT,
-    id_cliente VARCHAR(9),
-    PRIMARY KEY (id, id_cliente),
-    FOREIGN KEY (id_cliente) REFERENCES hotel.cliente
+-- Tabla InformesCita
+CREATE TABLE hospital.informesCita (
+	id_informe VARCHAR(9) PRIMARY KEY ,
+    id_cita VARCHAR(9) PRIMARY KEY ,
+    FOREIGN KEY (id_informe) REFERENCES hospital.informe,
+    FOREIGN KEY (id_cita) REFERENCES hospital.cita
 );
-
--- Tabla Telefono
-CREATE TABLE hotel.telefono (
-    id INT,
-    id_cliente VARCHAR(9),
-    telefono VARCHAR(25) NOT NULL,
-    PRIMARY KEY (id, id_cliente),
-    FOREIGN KEY (id, id_cliente) REFERENCES hotel.contacto
-);
-
--- Tabla Correo_electrónico
-CREATE TABLE hotel.correo_electronico (
-    id INT,
-    id_cliente VARCHAR(9),
-    direcion VARCHAR(50) NOT NULL,
-    PRIMARY KEY (id, id_cliente),
-    FOREIGN KEY (id, id_cliente) REFERENCES hotel.contacto
-);
-
--- Tabla Incidencia
-CREATE TABLE hotel.incidencia (
-    id_incidencia SERIAL PRIMARY KEY,
-    descricion VARCHAR(500) NOT NULL,
-    data_incidencia DATE NOT NULL,
-    resolta BOOLEAN DEFAULT False,
-    coste_solucion DECIMAL(10, 2) DEFAULT 0
-);
-
--- Tabla Incide
-CREATE TABLE hotel.incide (
-    id_incidencia INT,
-    id_hotel VARCHAR(9),
-    piso INT,
-    nome VARCHAR(50),
-    PRIMARY KEY (id_incidencia, id_hotel, piso, nome),
-    FOREIGN KEY (id_incidencia) REFERENCES hotel.incidencia,
-    FOREIGN KEY (id_hotel, piso, nome) REFERENCES hotel.lugar
-);
-
--- Tabla Soluciona
-CREATE TABLE hotel.soluciona (
-    id_incidencia INT,
-    id_traballador VARCHAR(9),
-    PRIMARY KEY (id_traballador, id_incidencia),
-    FOREIGN KEY (id_traballador) REFERENCES hotel.traballador,
-    FOREIGN KEY (id_incidencia) REFERENCES hotel.incidencia
-);
-
 
 -- RESTRICCIÓNS
 
