@@ -67,87 +67,88 @@ InformesCita(id_informe, id_cita)
 --CREATE TYPE hotel.estado_reserva_enum AS ENUM ('Check-Out', 'Canceled', 'Upcoming', 'No-Show');
 --CREATE TYPE hotel.vistas_enum AS ENUM ('No views', 'Partial views', 'Full views');
 
--- Tabla Hospital
+-- Tabla Persona
 CREATE TABLE hospital.persona (
-    id_persona VARCHAR(9) PRIMARY KEY, --no es mejor poner int?
+    id_persona INT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
-    genero VARCHAR(10) NOT NULL,
-    fecha_nacimiento DATE NOT NULL,
-    pais VARCHAR(50) NOT NULL,
-    localidad VARCHAR (50) NOT NULL,
-    codigo_postal VARCHAR(12) NOT NULL, -- no es mejor int?
-    calle VARCHAR(100) NOT NULL,
-    numero INT NOT NULL,
-    numero_telefono VARCHAR(20) NOT NULL
+    genero VARCHAR(50),
+    fecha_nacimiento DATE,
+    pais VARCHAR(50),
+    localidad VARCHAR (50),
+    codigo_postal VARCHAR(20), -- no es mejor int? noup, hai letras nalgúns países :/
+    calle VARCHAR(100),
+    numero VARCHAR(20),
+    numero_telefono VARCHAR(20)
 );
 
 -- Tabla Paciente
 CREATE TABLE hospital.paciente (
-    id_paciente VARCHAR(9) PRIMARY KEY,
-    grupo_sanguineo VARCHAR(5) NOT NULL,
+    id_paciente INT PRIMARY KEY,
+    grupo_sanguineo VARCHAR(5),
     FOREIGN KEY (id_paciente) REFERENCES hospital.persona(id_persona)
 );
 
 -- Tabla Medico
 CREATE TABLE hospital.medico (
-    id_medico VARCHAR (9) PRIMARY KEY,
-    id_jefe VARCHAR(9),
+    id_medico INT PRIMARY KEY,
+    id_jefe INT,
     FOREIGN KEY (id_medico) REFERENCES hospital.persona(id_persona),
     FOREIGN KEY (id_jefe) REFERENCES hospital.medico(id_medico)
 );
 
 -- Tabla Informe
 CREATE TABLE hospital.informe (
-    id_paciente VARCHAR (9) PRIMARY KEY,
-    id_informe VARCHAR(9) PRIMARY KEY,
-    hecho_por VARCHAR(9) NOT NULL,
+    id_paciente INT PRIMARY KEY,
+    id_informe INT PRIMARY KEY,
+    id_medico INT NOT NULL,
     fecha DATE NOT NULL,
-    categoria VARCHAR(20) NOT NULL ,
+    categoria VARCHAR(20),
     texto TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
-    FOREIGN KEY (hecho_por) REFERENCES hospital.medico(id_medico)
-
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico)
 );
 
 -- Tabla Hospital
 CREATE TABLE hospital.hospital (
-    id_hospital VARCHAR(9) PRIMARY KEY ,
+    id_hospital INT PRIMARY KEY ,
     nombre VARCHAR(50) NOT NULL,
-    pais VARCHAR(20) NOT NULL,
-    localidad VARCHAR(50) NOT NULL,
+    pais VARCHAR(50) NOT NULL,
+    localidad VARCHAR(50),
     codigo_postal VARCHAR(20) NOT NULL,
-    calle VARCHAR(50) NOT NULL,
-    numero VARCHAR(9) NOT NULL,
-    latitud DECIMAL(10, 8) NOT NULL,
-    longitud DECIMAL(11, 8) NOT NULL,
-    tipo VARCHAR(10) NOT NULL
+    calle VARCHAR(50),
+    numero VARCHAR(15),
+    latitud DECIMAL(10, 8),
+    longitud DECIMAL(11, 8),
+    tipo VARCHAR(10) -- Esto q era? Se é estilo centro de saúde/hospital, entón mellor facer un enum
 );
 
 -- Tabla Area
 CREATE TABLE hospital.area (
-    id_hospital VARCHAR(9) PRIMARY KEY ,
-    nombre_area VARCHAR(20) PRIMARY KEY ,
+    id_hospital INT PRIMARY KEY ,
+    nombre_area VARCHAR(50) PRIMARY KEY ,
     FOREIGN KEY (id_hospital) REFERENCES hospital.hospital
 );
 
 -- Tabla Cita
 CREATE TABLE hospital.cita (
-    id_paciente VARCHAR(9) PRIMARY KEY ,
-    id_cita VARCHAR(9) PRIMARY KEY ,
-    id_medico VARCHAR(9) NOT NULL,
-    id_hospital VARCHAR(9) NOT NULL,
-    nombre_area VARCHAR(20) NOT NULL,
+    id_paciente INT PRIMARY KEY ,
+    id_cita INT PRIMARY KEY ,
+    id_medico INT NOT NULL,
+    id_hospital INT NOT NULL,
+    nombre_area INT NOT NULL,
     fecha DATE NOT NULL,
     hora_comienzo TIME NOT NULL,
     hora_fin TIME NOT NULL,
     razon VARCHAR(50) NOT NULL,
-    presencial VARCHAR(1) NOT NULL DEFAULT 'T',
+    presencial BOOLEAN NOT NULL DEFAULT FALSE,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
-    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area,
-    CHECK (presencial IN ('T','F'))
+    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
 );
+
+
+
 
 -- Tabla Lugar
 CREATE TABLE hotel.lugar (
