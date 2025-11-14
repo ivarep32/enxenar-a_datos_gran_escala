@@ -116,8 +116,8 @@ CREATE TABLE hospital.ingreso (
 -- Tabla Medicamento
 CREATE TABLE hospital.medicamento (
     id_medicamento INT PRIMARY KEY ,
-    nombre VARCHAR(20) NOT NULL,
-    principio_activo VARCHAR(20) NOT NULL
+    nombre VARCHAR(50) NOT NULL,
+    principio_activo VARCHAR(50) NOT NULL
 );
 
 -- Tabla Receta

@@ -2,19 +2,15 @@ import pandas as pd
 import numpy as np
 import random
 from datetime import datetime, timedelta
-import os
-
-# Ensure output folder exists
-os.makedirs("../csvs", exist_ok=True)
 
 # === Load existing tables ===
-df_pacientes = pd.read_csv("../csvs/Paciente.csv", sep=";")
-df_medicos = pd.read_csv("../csvs/Medico.csv", sep=";")
-df_medicamentos = pd.read_csv("../csvs/Medicamento.csv", sep=";")
+df_pacientes = pd.read_csv("csvs/Paciente.csv", sep=";")
+df_medicos = pd.read_csv("csvs/Medico.csv", sep=";")
+df_medicamentos = pd.read_csv("csvs/Medicamento.csv", sep=";")
 
 # === Parameters ===
-mean_recetas_per_medico = 120
-std_recetas = 30
+mean_recetas_per_medico = 160
+std_recetas = 40
 
 razones = [
     "Dolor agudo",
@@ -49,7 +45,7 @@ for _, medico in df_medicos.iterrows():
 
         receitas_data.append({
             "id_paciente": id_paciente,
-            "id_medico": medico["id_medico"],
+            "id_medico": int(medico["id_medico"]),
             "id_medicamento": id_medicamento,
             "fecha": random_date_within_years(),
             "razon": random.choice(razones)
@@ -59,7 +55,7 @@ for _, medico in df_medicos.iterrows():
 df_receitas = pd.DataFrame(receitas_data)
 
 # === Save to CSV ===
-df_receitas.to_csv("../csvs/Receita.csv", index=False, sep=";", encoding="utf-8-sig")
+df_receitas.to_csv("csvs/Receta.csv", index=False, sep=";", encoding="utf-8-sig")
 
 print(f"✅ Generated {len(df_receitas)} recetas.")
 print(df_receitas.head())
