@@ -25,15 +25,14 @@ razones = [
     "Dolor muscular"
 ]
 
-
 def random_date_within_years(years_back=3):
     end_date = datetime.now()
     start_date = end_date - timedelta(days=365 * years_back)
     rand_days = random.randint(0, (end_date - start_date).days)
     return (start_date + timedelta(days=rand_days)).date()
 
-
 receitas_data = []
+id_counter = 1  # Start ID for recetas
 
 for _, medico in df_medicos.iterrows():
     # Number of prescriptions this doctor will write
@@ -44,12 +43,14 @@ for _, medico in df_medicos.iterrows():
         id_medicamento = random.choice(df_medicamentos["id_medicamento"].tolist())
 
         receitas_data.append({
+            "id_receta": id_counter,
             "id_paciente": id_paciente,
             "id_medico": int(medico["id_medico"]),
             "id_medicamento": id_medicamento,
             "fecha": random_date_within_years(),
             "razon": random.choice(razones)
         })
+        id_counter += 1
 
 # === Create DataFrame ===
 df_receitas = pd.DataFrame(receitas_data)
