@@ -27,7 +27,7 @@ SET datestyle = 'ISO, YMD';
 \copy hospital.medicamento       from Medicamento.csv       delimiter ';' csv header;
 \copy hospital.receta            from Receta.csv            delimiter ';' csv header;
 \copy hospital.trabaja_en        from TrabajaEn.csv        delimiter ';' csv header;
-\copy hospital.informe_cita      from InformeCita.csv      delimiter ';' csv header;
+\copy hospital.informes_cita      from InformeCita.csv      delimiter ';' csv header;
 
 COMMIT;
 EOF
