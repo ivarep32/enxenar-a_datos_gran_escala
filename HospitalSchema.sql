@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS hospital.informe CASCADE;
 DROP TABLE IF EXISTS hospital.medicamento CASCADE;
 DROP TABLE IF EXISTS hospital.receta CASCADE;
 DROP TABLE IF EXISTS hospital.trabaja_en CASCADE;
-DROP TABLE IF EXISTS hospital.informe_cita CASCADE;
+DROP TABLE IF EXISTS hospital.informes_cita CASCADE;
 
 --CREATE TYPE hotel.estado_reserva_enum AS ENUM ('Check-Out', 'Canceled', 'Upcoming', 'No-Show');
 --CREATE TYPE hotel.vistas_enum AS ENUM ('No views', 'Partial views', 'Full views');
@@ -61,7 +61,7 @@ CREATE TABLE hospital.informe (
     categoria VARCHAR(20),
     texto TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
-    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico)
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
     PRIMARY KEY (id_paciente, id_informe)
 );
 
@@ -81,9 +81,10 @@ CREATE TABLE hospital.hospital (
 
 -- Tabla Area
 CREATE TABLE hospital.area (
-    id_hospital INT PRIMARY KEY ,
-    nombre_area VARCHAR(50) PRIMARY KEY ,
-    FOREIGN KEY (id_hospital) REFERENCES hospital.hospital
+    id_hospital INT,
+    nombre_area VARCHAR(50),
+    FOREIGN KEY (id_hospital) REFERENCES hospital.hospital,
+    PRIMARY KEY (id_hospital, nombre_area)
 );
 
 -- Tabla Cita
@@ -92,7 +93,7 @@ CREATE TABLE hospital.cita (
     id_cita INT,
     id_medico INT NOT NULL,
     id_hospital INT NOT NULL,
-    nombre_area INT NOT NULL,
+    nombre_area VARCHAR(50) NOT NULL,
     fecha DATE NOT NULL,
     hora_comienzo TIME NOT NULL,
     hora_fin TIME NOT NULL,
@@ -100,14 +101,16 @@ CREATE TABLE hospital.cita (
     presencial BOOLEAN NOT NULL DEFAULT FALSE,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
-    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
+    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area (id_hospital, nombre_area),
     PRIMARY KEY (id_paciente, id_cita)
 );
 -- Tabla Ingreso
 CREATE TABLE hospital.ingreso (
-    id_cita INT PRIMARY KEY,
+    id_paciente INT,
+    id_cita INT,
     fecha_alta DATE NOT NULL,
-    FOREIGN KEY (id_cita) REFERENCES hospital.cita
+    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
+    PRIMARY KEY (id_paciente, id_cita)
 );
 
 -- Tabla Medicamento
@@ -126,25 +129,26 @@ CREATE TABLE hospital.receta (
     razon TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente(id_paciente),
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
-    FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento)
+    FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento),
     PRIMARY KEY (id_medico, id_paciente, id_medicamento)
 );
 
 -- Tabla Trabaja_En
-CREATE TABLE hospital.trabajaEn (
+CREATE TABLE hospital.trabaja_en (
     id_medico INT,
     id_hospital INT,
-    nombre_area VARCHAR(20) NOT NULL,
+    nombre_area VARCHAR(50) NOT NULL,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
-    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
+    FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area (id_hospital, nombre_area),
     PRIMARY KEY (id_medico, id_hospital)
 );
 
 -- Tabla InformesCita
-CREATE TABLE hospital.informesCita (
+CREATE TABLE hospital.informes_cita (
+    id_paciente INT,
 	id_informe INT,
     id_cita INT,
-    FOREIGN KEY (id_informe) REFERENCES hospital.informe,
-    FOREIGN KEY (id_cita) REFERENCES hospital.cita
-    PRIMARY KEY (id_informe, id_cita)
+    FOREIGN KEY (id_paciente, id_informe) REFERENCES hospital.informe(id_paciente, id_informe),
+    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
+    PRIMARY KEY (id_informe, id_paciente, id_cita)
 );

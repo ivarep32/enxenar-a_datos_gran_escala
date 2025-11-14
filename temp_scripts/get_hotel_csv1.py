@@ -39,6 +39,10 @@ hospitals_data = []
 
 for i, addr in used_addresses.iterrows():
     name = f"{random.choice(hospital_types)} {random.choice(special_names)}"
+    # Force numeric conversion for latitude/longitude
+    lat = float(str(addr["Latitude"]).replace(",", "."))
+    lon = float(str(addr["Longitude"]).replace(",", "."))
+    
     hospitals_data.append({
         "id_hospital": i + 1,
         "nombre": name,
