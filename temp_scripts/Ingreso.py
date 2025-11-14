@@ -21,6 +21,7 @@ for _, cita in df_citas.iterrows():
     fecha_alta = fecha_cita + timedelta(days=random.randint(0, 10))
 
     ingreso_data.append({
+        "id_paciente" : cita["id_paciente"],
         "id_cita": cita["id_cita"],
         "fecha_alta": fecha_alta.strftime("%Y-%m-%d")  # match Cita.csv format
     })

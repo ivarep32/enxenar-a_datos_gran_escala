@@ -9,11 +9,14 @@ psql -U alumnobd -d hospital -c "SET search_path TO hospital, public;"
 
 # Paso 3: Importar datos usando una única transacción y \COPY
 psql -U alumnobd -d hospital <<EOF
-SET datestyle = 'ISO, DMY';
-
 BEGIN TRANSACTION;
 
+SET datestyle = 'ISO, DMY';
 \copy hospital.persona           from Persona.csv           delimiter ';' csv header;
+
+-- Switch to YMD for other tables
+SET datestyle = 'ISO, YMD';
+
 \copy hospital.paciente          from Paciente.csv          delimiter ';' csv header;
 \copy hospital.medico            from Medico.csv            delimiter ';' csv header;
 \copy hospital.hospital          from Hospital.csv          delimiter ';' csv header;

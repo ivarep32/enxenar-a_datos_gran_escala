@@ -6,7 +6,13 @@ from datetime import timedelta, time
 # --- Load inputs ---
 informe_df = pd.read_csv("csvs/Informe.csv", sep=";")
 traballa_df = pd.read_csv("csvs/TraballaEn.csv", sep=";")
-persona_df = pd.read_csv("csvs/Persona.csv", sep=";")  # for random extra citas
+paciente_df = pd.read_csv("csvs/Paciente.csv", sep=";")  # Use Paciente.csv instead of Persona.csv
+
+# Ensure id_medico and id_paciente are integers
+traballa_df["id_medico"] = traballa_df["id_medico"].astype(int)
+informe_df["id_medico"] = informe_df["id_medico"].astype(int)
+informe_df["id_paciente"] = informe_df["id_paciente"].astype(int)
+paciente_df["id_paciente"] = paciente_df["id_paciente"].astype(int)
 
 # Convert date fields
 informe_df["fecha"] = pd.to_datetime(informe_df["fecha"])
@@ -19,7 +25,7 @@ id_cita_counter = 1
 
 # --- STEP 1: Create Citas linked to Informes ---
 for _, row in informe_df.iterrows():
-    if random.random() < 0.9:  # 70% chance this informe has a cita
+    if random.random() < 0.95:  # 90% chance this informe has a cita
         id_paciente = row["id_paciente"]
         id_informe = row["id_informe"]
         id_medico = row["id_medico"]
@@ -48,7 +54,7 @@ for _, row in informe_df.iterrows():
         citas.append({
             "id_paciente": id_paciente,
             "id_cita": id_cita_counter,
-            "id_medico": id_medico,
+            "id_medico": int(id_medico),
             "id_hospital": id_hospital,
             "nome_area": nome_area,
             "fecha": fecha_cita.date(),
@@ -68,14 +74,15 @@ for _, row in informe_df.iterrows():
 
 # --- STEP 2: Add extra random Citas without informes ---
 
-num_extra_citas = len(citas) // 2  # e.g., 50% more citas without informes
+num_extra_citas = int(len(citas) * 0.6)   # e.g., 60% more citas without informes
 
 # random doctors who appear in TraballaEn
 possible_docs = traballa_df["id_medico"].unique()
+possible_pacientes = paciente_df["id_paciente"].tolist()
 
 for _ in range(num_extra_citas):
     id_medico = random.choice(possible_docs)
-    id_paciente = random.choice(persona_df["id_persona"].tolist())
+    id_paciente = random.choice(possible_pacientes)
     work = traballa_df[traballa_df["id_medico"] == id_medico].sample(1).iloc[0]
 
     fecha_cita = pd.Timestamp("2024-01-01") + timedelta(days=random.randint(0, 365))
@@ -92,7 +99,7 @@ for _ in range(num_extra_citas):
     citas.append({
         "id_paciente": id_paciente,
         "id_cita": id_cita_counter,
-        "id_medico": id_medico,
+        "id_medico": int(id_medico),
         "id_hospital": work["id_hospital"],
         "nome_area": work["nome_area"],
         "fecha": fecha_cita.date(),
@@ -109,7 +116,7 @@ cita_df = pd.DataFrame(citas)
 informe_cita_df = pd.DataFrame(informe_cita)
 
 cita_df.to_csv("csvs/Cita.csv", sep=";", index=False)
-informe_cita_df.to_csv("csvs/Informe_Cita.csv", sep=";", index=False)
+informe_cita_df.to_csv("csvs/InformeCita.csv", sep=";", index=False)
 
 print(f"✅ Generated {len(cita_df)} Citas ({len(informe_cita_df)} linked to Informes).")
 print(cita_df.head())
