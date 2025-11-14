@@ -15,7 +15,7 @@ BEGIN TRANSACTION;
 \copy hospital.paciente          from Paciente.csv          delimiter ',' csv header;
 \copy hospital.medico            from Medico.csv            delimiter ',' csv header;
 \copy hospital.hospital          from Hospital.csv          delimiter ',' csv header;
-\copy hospital.area              from Area.csv              delimiter ',' csv header;
+\copy hospital.area              from Areas.csv              delimiter ',' csv header;
 \copy hospital.cita              from Cita.csv              delimiter ',' csv header;
 \copy hospital.ingreso           from Ingreso.csv           delimiter ',' csv header;
 \copy hospital.informe           from Informe.csv           delimiter ',' csv header;

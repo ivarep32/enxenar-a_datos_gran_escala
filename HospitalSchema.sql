@@ -54,14 +54,15 @@ CREATE TABLE hospital.medico (
 
 -- Tabla Informe
 CREATE TABLE hospital.informe (
-    id_paciente INT PRIMARY KEY,
-    id_informe INT PRIMARY KEY,
+    id_paciente INT,
+    id_informe INT,
     id_medico INT NOT NULL,
     fecha DATE NOT NULL,
     categoria VARCHAR(20),
     texto TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico)
+    PRIMARY KEY (id_paciente, id_informe)
 );
 
 -- Tabla Hospital
@@ -87,8 +88,8 @@ CREATE TABLE hospital.area (
 
 -- Tabla Cita
 CREATE TABLE hospital.cita (
-    id_paciente INT PRIMARY KEY ,
-    id_cita INT PRIMARY KEY ,
+    id_paciente INT,
+    id_cita INT,
     id_medico INT NOT NULL,
     id_hospital INT NOT NULL,
     nombre_area INT NOT NULL,
@@ -100,13 +101,13 @@ CREATE TABLE hospital.cita (
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
     FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
+    PRIMARY KEY (id_paciente, id_cita)
 );
 -- Tabla Ingreso
 CREATE TABLE hospital.ingreso (
     id_cita INT PRIMARY KEY,
     fecha_alta DATE NOT NULL,
     FOREIGN KEY (id_cita) REFERENCES hospital.cita
-
 );
 
 -- Tabla Medicamento
@@ -118,30 +119,32 @@ CREATE TABLE hospital.medicamento (
 
 -- Tabla Receta
 CREATE TABLE hospital.receta (
-    id_paciente INT PRIMARY KEY ,
-    id_medico INT PRIMARY KEY,
-    id_medicamento INT PRIMARY KEY,
+    id_paciente INT,
+    id_medico INT,
+    id_medicamento INT,
     fecha DATE NOT NULL,
     razon TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente(id_paciente),
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
     FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento)
-
+    PRIMARY KEY (id_medico, id_paciente, id_medicamento)
 );
 
 -- Tabla Trabaja_En
 CREATE TABLE hospital.trabajaEn (
-    id_medico INT NOT NULL,
-    id_hospital INT NOT NULL,
+    id_medico INT,
+    id_hospital INT,
     nombre_area VARCHAR(20) NOT NULL,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
     FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area
+    PRIMARY KEY (id_medico, id_hospital)
 );
 
 -- Tabla InformesCita
 CREATE TABLE hospital.informesCita (
-	id_informe INT PRIMARY KEY ,
-    id_cita INT PRIMARY KEY ,
+	id_informe INT,
+    id_cita INT,
     FOREIGN KEY (id_informe) REFERENCES hospital.informe,
     FOREIGN KEY (id_cita) REFERENCES hospital.cita
+    PRIMARY KEY (id_informe, id_cita)
 );
