@@ -122,15 +122,15 @@ CREATE TABLE hospital.medicamento (
 
 -- Tabla Receta
 CREATE TABLE hospital.receta (
-    id_paciente INT,
-    id_medico INT,
-    id_medicamento INT,
+    id_receta INT PRIMARY KEY,
+    id_paciente INT NOT NULL,
+    id_medico INT NOT NULL,
+    id_medicamento INT NOT NULL,
     fecha DATE NOT NULL,
     razon TEXT NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente(id_paciente),
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
-    FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento),
-    PRIMARY KEY (id_medico, id_paciente, id_medicamento)
+    FOREIGN KEY (id_medicamento) REFERENCES hospital.medicamento(id_medicamento)
 );
 
 -- Tabla Trabaja_En
