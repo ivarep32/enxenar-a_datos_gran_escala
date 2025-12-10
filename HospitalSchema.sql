@@ -64,8 +64,8 @@ CREATE TABLE hospital.informe (
 
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
-    PRIMARY KEY (id_paciente, id_informe),
     FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
+    PRIMARY KEY (id_paciente, id_informe)
 );
 
 -- Tabla Hospital
