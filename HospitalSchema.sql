@@ -60,9 +60,12 @@ CREATE TABLE hospital.informe (
     fecha DATE NOT NULL,
     categoria VARCHAR(20),
     texto TEXT NOT NULL,
+    id_cita INT
+
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
-    PRIMARY KEY (id_paciente, id_informe)
+    PRIMARY KEY (id_paciente, id_informe),
+    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
 );
 
 -- Tabla Hospital
@@ -141,14 +144,4 @@ CREATE TABLE hospital.trabaja_en (
     FOREIGN KEY (id_medico) REFERENCES hospital.medico,
     FOREIGN KEY (id_hospital, nombre_area) REFERENCES hospital.area (id_hospital, nombre_area),
     PRIMARY KEY (id_medico, id_hospital)
-);
-
--- Tabla InformesCita
-CREATE TABLE hospital.informes_cita (
-    id_paciente INT,
-	id_informe INT,
-    id_cita INT,
-    FOREIGN KEY (id_paciente, id_informe) REFERENCES hospital.informe(id_paciente, id_informe),
-    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
-    PRIMARY KEY (id_informe, id_paciente, id_cita)
 );
