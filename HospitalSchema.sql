@@ -52,21 +52,6 @@ CREATE TABLE hospital.medico (
     FOREIGN KEY (id_jefe) REFERENCES hospital.medico(id_medico)
 );
 
--- Tabla Informe
-CREATE TABLE hospital.informe (
-    id_paciente INT,
-    id_informe INT,
-    id_medico INT NOT NULL,
-    fecha DATE NOT NULL,
-    categoria VARCHAR(20),
-    texto TEXT NOT NULL,
-    id_cita INT,
-
-    FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
-    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
-    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
-    PRIMARY KEY (id_paciente, id_informe)
-);
 
 -- Tabla Hospital
 CREATE TABLE hospital.hospital (
@@ -114,6 +99,22 @@ CREATE TABLE hospital.ingreso (
     fecha_alta DATE NOT NULL,
     FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
     PRIMARY KEY (id_paciente, id_cita)
+);
+
+-- Tabla Informe
+CREATE TABLE hospital.informe (
+    id_paciente INT,
+    id_informe INT,
+    id_medico INT NOT NULL,
+    fecha DATE NOT NULL,
+    categoria VARCHAR(20),
+    texto TEXT NOT NULL,
+    id_cita INT,
+
+    FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
+    FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
+    FOREIGN KEY (id_paciente, id_cita) REFERENCES hospital.cita(id_paciente, id_cita),
+    PRIMARY KEY (id_paciente, id_informe)
 );
 
 -- Tabla Medicamento
