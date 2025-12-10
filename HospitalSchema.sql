@@ -60,7 +60,7 @@ CREATE TABLE hospital.informe (
     fecha DATE NOT NULL,
     categoria VARCHAR(20),
     texto TEXT NOT NULL,
-    id_cita INT
+    id_cita INT,
 
     FOREIGN KEY (id_paciente) REFERENCES hospital.paciente,
     FOREIGN KEY (id_medico) REFERENCES hospital.medico(id_medico),
